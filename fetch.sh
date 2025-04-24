@@ -96,8 +96,12 @@ main() {
 
     cp 3_14_0/ rnaseq -r
 
-    # TODO: Here fetch images from online source
-    # cp opt-images/* rnaseq/singularity-images/
+    # Download the optimized singularity images
+    pip install gdown
+    check_command $? "Installing gdown"
+    gdown --folder https://drive.google.com/drive/folders/1r_CyQzVlR7y6-8ANZjH8pblpoPCA23sE
+    check_command $? "Fetching optimized singularity images"
+    mv ./Optimized\ NF\ Images/* ./rnaseq/singularity-images/
     
     # Fetch the datasets
     log_section "Fetching datasets"
@@ -112,7 +116,6 @@ main() {
     	--nf_core_pipeline rnaseq \
     	--outdir ./fetched/
     check_command $? "Fetching datasets"
-    
 }
 
 # Call main function with all arguments
