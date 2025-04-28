@@ -1,0 +1,12 @@
+[submodule "src/qualimap"]
+	path = src/qualimap
+	url = https://bitbucket.org/research-pramod/qualimap.git
+[submodule "src/fastqc"]
+	path = src/fastqc
+	url = https://github.com/PramodRaoB/FastQC.git
+[submodule "src/trimgalore"]
+	path = src/trimgalore
+	url = https://github.com/PramodRaoB/TrimGalore.git
+[submodule "src/picard"]
+	path = src/picard
+	url = https://github.com/PramodRaoB/picard.git
